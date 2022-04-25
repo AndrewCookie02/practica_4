@@ -4,9 +4,13 @@
 // personalizar boostrap
 @import "shared/mybootstrap";
 
-@import "shared/mediaquery" ;
+@import "config/mediaquery" ;
 
-@import "shared/config" ;
+@import "config/navbar" ;
+
+@import "config/main" ;
+
+@import "config/header";
 
 @import "shared/mixin" ;
 //mas componentes/estilos

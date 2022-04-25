@@ -1,0 +1,63 @@
+header {
+
+    .entrada{
+        @include margin (8%, 0%, 3%, 0%);
+        @include paddings (2%, 0%, 0%, 0%);
+        gap:10px;
+        background-color: $myBgColorLight2;
+        display: grid;
+        width: 80% ;
+        height: 10%;
+        grid-template-areas: "img letra";
+        grid-template-columns: 55% 45%;
+        justify-content: center;
+        
+        figure{
+            grid-area: img;
+            padding-top: 2%;
+            
+           
+        }
+        div{
+            grid-area: letra;
+            text-align: center;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           background-color: $myBgColorLight;
+           
+        }
+    }
+
+}
+
+@media all and (max-width:660px){
+    
+    header .entrada{
+        display: grid;
+        grid-template-areas: "img img"
+                            "letra letra";
+        grid-template-columns: 100%;
+        grid-template-rows: 56% 44%;
+        width: 90% ;
+        @include paddings (1%, 1%, 0%, 2%);
+        
+        figure{
+            grid-area: img;
+            @include paddings (1%, 1%, 0%, 2%);
+            padding-top: 2%;
+            width: 100%;
+            
+           
+        }
+        div{
+            grid-area: letra;
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            width: 100%;
+        }
+    }
+}
