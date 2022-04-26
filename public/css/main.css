@@ -4,6 +4,9 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11958,7 +11961,10 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-  background-color: #8cf0ad;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 80px;
 }
 
 .navbar img {
@@ -11979,6 +11985,78 @@ main .container-fluid, main .container-sm, main .container-md, main .container-l
           align-items: center;
 }
 
+main {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+
+main #servicios {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+
+main #servicios .row div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+main #servicios .row div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main #servicios .row div i {
+  font-size: 40px;
+}
+
+main #clientes .row div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #clientes .row div img {
+  -webkit-box-shadow: 4px 3px 6px 0px grey;
+          box-shadow: 4px 3px 6px 0px grey;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+main #clientes .row div img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+header {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+
 header .entrada {
   margin-left: 8%;
   margin-right: 0%;
@@ -11989,7 +12067,6 @@ header .entrada {
   padding-top: 0%;
   padding-bottom: 0%;
   gap: 10px;
-  background-color: #9797df;
   display: -ms-grid;
   display: grid;
   width: 80%;
@@ -12030,6 +12107,83 @@ header .entrada div {
   background-color: #8cf0ad;
 }
 
+footer {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+footer section {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+      grid-template-areas: "secc1 secc2" "secc1 secc2";
+}
+
+footer section div:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: secc1;
+}
+
+footer section div:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: secc2;
+}
+
+.navbar {
+  background-color: #8cf0ad;
+}
+
+.entrada {
+  background-color: #9797df;
+}
+
+/*$titulos: 40px ;
+$subtitulo: 25px;
+$parrafo:18px;
+*/
+/******************************************/
+.texto-txt1 {
+  font-size: 40px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: blue;
+}
+
+.texto-txt2 {
+  font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #084b50;
+}
+
+.texto-txtp {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #661304;
+}
+
+/***
+.txt-1{
+            font-size: $titulos;
+           }
+           .txt-2{
+               font-size: $subtitulo;
+           }
+           .txt-p{
+               font-size: $parrafo;
+           }
+***/
 @media all and (max-width: 660px) {
   header .entrada {
     display: -ms-grid;
@@ -12076,6 +12230,36 @@ header .entrada div {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+  }
+}
+
+@media all and (max-width: 660px) {
+  footer section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "secc1 secc1" "secc2 secc2";
+    -ms-grid-columns: 40%;
+        grid-template-columns: 40%;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+    width: 90%;
+    gap: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0%;
+    padding-bottom: 2%;
+  }
+  footer section div:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: secc1;
+  }
+  footer section div:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: secc2;
   }
 }
 /*# sourceMappingURL=main.css.map */
